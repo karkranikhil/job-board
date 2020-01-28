@@ -1,0 +1,4 @@
+sudo start redis-server
+sudo restart redis-server
+sudo stop redis-server
+//redis is in-memory database
