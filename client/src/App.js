@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import './App.css';
 import Jobs from './Jobs'
-const JOB_API_URL = 'http://localhost:3001/jobs'
+const JOB_API_URL = '/api/jobs'
 const mockjobs=[
   {title:'SE1', company:'Google'},
   {title:'SE2', company:'Facebook'},

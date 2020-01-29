@@ -2,3 +2,38 @@ sudo start redis-server
 sudo restart redis-server
 sudo stop redis-server
 //redis is in-memory database
+
+//****nginx cmd *****//
+
+//edit config 
+vi /etc/nginx/sites-available/default
+//restart nginx 
+sudo systemctl restart nginx
+
+// open server
+ssh master
+// copy folder
+ scp -r build/ ssh master:~
+ scp -r worker/ ssh master:~
+ scp -r api/ ssh master:~
+ scp -r package.json/ ssh master:~
+
+
+ // worker command
+ for status  - pm2 ps
+ to stop server -  pm2 stop hello
+ to start monitoring - pm2 start hello.js
+ to delete - pm2 delete hello
+
+ // to serve the build folder with pm2
+ pm2 start serve -- -s build/
+ pm2 start api/index.js --name api
+ pm2 start worker/index.js --name worker
+
+ // to print all logs
+ pm2 logs worker
+
+ //urls
+ https://hackernoon.com/start-to-finish-deploying-a-react-app-on-digitalocean-bcfae9e6d01b
+ https://www.digitalocean.com/community/tutorials/how-to-set-up-a-node-js-application-for-production-on-ubuntu-18-04
+ https://certbot.eff.org/lets-encrypt/ubuntubionic-nginx

@@ -6,7 +6,7 @@ const getAsync = promisify(client.get).bind(client);
 const app = express()
 const port = 3001
 
-app.get('/Jobs', async(req, res) => {
+app.get('/api/Jobs', async(req, res) => {
     const jobs = await getAsync('github')
     console.log(JSON.parse(jobs).length)
     res.header("Access-Control-Allow-Origin", "http://localhost:3000")
