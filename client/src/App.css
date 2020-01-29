@@ -1,0 +1,38 @@
+body{
+  margin: 0 auto;
+  margin: 0 auto;
+  box-sizing: border-box;
+  justify-content: center;
+  display: flex;
+  width: 100%;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.job{
+  display: flex;
+  justify-content:space-between;
+  box-shadow: 2px 2px 5px grey;
+  padding: 20px 10px;
+  margin:20px 0;
+  align-items: center;
+}
+.job:hover{
+  cursor: pointer;
+  color:#666
+}
+.job-company{
+  padding: 0 30px;
+}
+.job-dialog{
+  padding: 30px 50px;
+}
+.detail-logo{
+  height:30px;
+}
